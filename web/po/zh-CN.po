@@ -1,0 +1,133 @@
+#
+# q962 <q962_@outlook.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"POT-Creation-Date: 2025-04-12 22:29+0800\n"
+"PO-Revision-Date: 2025-04-14 22:32+0800\n"
+"Last-Translator: q962 <q962_@outlook.com>\n"
+"Language-Team: zh_Hans_CN\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 47.1\n"
+
+#: src/components/ClipDataItem.vue:14
+msgid "Copy"
+msgstr "复制"
+
+#: src/components/ClipDataItem.vue:28
+msgid "Save"
+msgstr "保存"
+
+#: src/components/ClipDataItem.vue:116
+msgid "Failed to set clipboard content: No permission"
+msgstr "设置剪切板数据失败：没有权限"
+
+#: src/components/ClipDataItem.vue:121
+msgid "Remote Clipboard Picture"
+msgstr "远程剪贴板图片"
+
+#: src/components/PullToRefresh.vue:11 src/components/ServerError.vue:42
+msgid "Reload"
+msgstr "尝试重新加载"
+
+#: src/components/Push.vue:19 src/components/Push.vue:29
+msgid "PUSH"
+msgstr "推送"
+
+#: src/components/Push.vue:45
+msgid "Text Content"
+msgstr "文本内容"
+
+#: src/components/Push.vue:61
+msgid "Image File"
+msgstr "图片文件"
+
+#: src/components/Push.vue:81
+msgid "Push failed"
+msgstr "推送失败"
+
+#: src/components/Push.vue:88
+msgid "Reset"
+msgstr "重置"
+
+#: src/components/Push.vue:89
+msgid "Push"
+msgstr "推送"
+
+#: src/components/Push.vue:91
+msgid "Cancel"
+msgstr "取消"
+
+#: src/components/ServerError.vue:2
+msgid "Load Failed!"
+msgstr "加载失败！"
+
+#: src/components/ServerError.vue:4
+msgid "Unable to communicate with the server."
+msgstr "无法与服务器通信。"
+
+#: src/components/ServerError.vue:5
+msgid "Possible causes and solutions:"
+msgstr "可能的原因和解决方案："
+
+#: src/components/ServerError.vue:8
+msgid ""
+"The system does not support mdns and cannot automatically obtain your host ip"
+msgstr "系统不支持mdns，无法自动获取您的主机 IP"
+
+#: src/components/ServerError.vue:10
+msgid "Try setting a static ip for your computer"
+msgstr "尝试为你的电脑设置静态 IP"
+
+#: src/components/ServerError.vue:14
+msgid "IP:Port"
+msgstr "IP地址:端口"
+
+#: src/components/ServerError.vue:18
+msgid "Set Server Alias"
+msgstr "设置服务器别名"
+
+#: src/components/ServerError.vue:22
+msgid "Alias"
+msgstr "别名"
+
+#: src/components/ServerError.vue:26
+msgid "Network failure"
+msgstr "网络异常"
+
+#: src/components/ServerError.vue:27
+msgid "Try reload"
+msgstr "尝试重新加载"
+
+#: src/components/ServerError.vue:30
+msgid "Not connected to wifi"
+msgstr "未连接到 WIFI"
+
+#: src/components/ServerError.vue:31
+msgid "Only works in LAN"
+msgstr "仅在局域网工作"
+
+#: src/components/ServerError.vue:33
+msgid "Server program not installed"
+msgstr "服务器程序未安装"
+
+#: src/components/ServerError.vue:39
+msgid "Just disconnect from wifi and open the app to display the current page"
+msgstr "断开 WIFI 后重新打开应用即可进入此页面"
+
+#: src/components/warning.vue:3
+msgid "Tip"
+msgstr "提示"
+
+#: src/components/warning.vue:11
+msgid "Close"
+msgstr "关闭"
+
+#: src/main.ts:35
+msgid "Clipboard List"
+msgstr "剪切板列表"

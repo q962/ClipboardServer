@@ -1,0 +1,50 @@
+@import './base.scss';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+
+  grid-template-columns: 100%;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    padding: 0 2rem;
+  }
+}
+
+.no-resize {
+  resize: none;
+}
+
+.unvisible {
+  display: none;
+}

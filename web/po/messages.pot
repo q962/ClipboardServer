@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: src/components/ClipDataItem.vue:14
+msgid "Copy"
+msgstr ""
+
+#: src/components/ClipDataItem.vue:28
+msgid "Save"
+msgstr ""
+
+#: src/components/ClipDataItem.vue:116
+msgid "Failed to set clipboard content: No permission"
+msgstr ""
+
+#: src/components/ClipDataItem.vue:121
+msgid "Remote Clipboard Picture"
+msgstr ""
+
+#: src/components/PullToRefresh.vue:11
+#: src/components/ServerError.vue:42
+msgid "Reload"
+msgstr ""
+
+#: src/components/Push.vue:19
+#: src/components/Push.vue:29
+msgid "PUSH"
+msgstr ""
+
+#: src/components/Push.vue:45
+msgid "Text Content"
+msgstr ""
+
+#: src/components/Push.vue:61
+msgid "Image File"
+msgstr ""
+
+#: src/components/Push.vue:81
+msgid "Push failed"
+msgstr ""
+
+#: src/components/Push.vue:88
+msgid "Reset"
+msgstr ""
+
+#: src/components/Push.vue:89
+msgid "Push"
+msgstr ""
+
+#: src/components/Push.vue:91
+msgid "Cancel"
+msgstr ""
+
+#: src/components/ServerError.vue:2
+msgid "Load Failed!"
+msgstr ""
+
+#: src/components/ServerError.vue:4
+msgid "Unable to communicate with the server."
+msgstr ""
+
+#: src/components/ServerError.vue:5
+msgid "Possible causes and solutions:"
+msgstr ""
+
+#: src/components/ServerError.vue:8
+msgid "The system does not support mdns and cannot automatically obtain your host ip"
+msgstr ""
+
+#: src/components/ServerError.vue:10
+msgid "Try setting a static ip for your computer"
+msgstr ""
+
+#: src/components/ServerError.vue:14
+msgid "IP:Port"
+msgstr ""
+
+#: src/components/ServerError.vue:18
+msgid "Set Server Alias"
+msgstr ""
+
+#: src/components/ServerError.vue:22
+msgid "Alias"
+msgstr ""
+
+#: src/components/ServerError.vue:26
+msgid "Network failure"
+msgstr ""
+
+#: src/components/ServerError.vue:27
+msgid "Try reload"
+msgstr ""
+
+#: src/components/ServerError.vue:30
+msgid "Not connected to wifi"
+msgstr ""
+
+#: src/components/ServerError.vue:31
+msgid "Only works in LAN"
+msgstr ""
+
+#: src/components/ServerError.vue:33
+msgid "Server program not installed"
+msgstr ""
+
+#: src/components/ServerError.vue:39
+msgid "Just disconnect from wifi and open the app to display the current page"
+msgstr ""
+
+#: src/components/warning.vue:3
+msgid "Tip"
+msgstr ""
+
+#: src/components/warning.vue:11
+msgid "Close"
+msgstr ""
+
+#: src/main.ts:35
+msgid "Clipboard List"
+msgstr ""

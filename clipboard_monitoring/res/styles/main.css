@@ -1,0 +1,17 @@
+.menu-window {
+  border-radius: 8px;
+}
+.main-box {
+  padding: 1em;
+}
+.block {
+  background: #00000009;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.popup-win {
+  border-radius: 0.5em;
+}
+
+@import url("resource:///io/github/q962/ClipboardServer/styles/override_default.css");

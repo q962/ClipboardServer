@@ -1,0 +1,7 @@
+client_ip.c
+Clipboard.c
+clipdata_manager.c
+ditto.c
+main.c
+tray.c
+utils/res-utils.c

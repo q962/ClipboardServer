@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">远程剪切板</string>
+    <string name="title_activity_main">远程剪切板</string>
+</resources>

@@ -1,0 +1,7 @@
+{
+  "name": "clipserver",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Remote Clipboard</string>
+    <string name="title_activity_main">Remote Clipboard</string>
+    <string name="package_name">io.github.q962.ClipboardClient</string>
+    <string name="custom_url_scheme">io.github.q962.ClipboardClient</string>
+</resources>

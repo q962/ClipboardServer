@@ -1,0 +1,71 @@
+Language: Cpp
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+BasedOnStyle: Google
+AccessModifierOffset: -2
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+AlignAfterOpenBracket: Align
+AlignEscapedNewlines: Left
+AlwaysBreakAfterReturnType: None
+BraceWrapping:
+  AfterClass: false
+  AfterControlStatement: false
+  AfterEnum: false
+  AfterFunction: true
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: true
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+BreakBeforeBraces: Stroustrup
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakStringLiterals : true
+ColumnLimit : 120
+CompactNamespaces : false
+ConstructorInitializerAllOnOneLineOrOnePerLine : true
+ConstructorInitializerIndentWidth : 4
+ContinuationIndentWidth : 2
+Cpp11BracedListStyle : false
+FixNamespaceComments : true
+IndentCaseLabels : true
+IndentWidth : 4
+IndentWrappedFunctionNames : false
+JavaScriptQuotes : Single
+SpaceAfterCStyleCast : false
+SpaceBeforeAssignmentOperators  : true
+SpaceBeforeCpp11BracedList : true
+SpaceBeforeCtorInitializerColon : true
+SpaceBeforeInheritanceColon : true
+SpaceBeforeParens : ControlStatements
+SpaceBeforeRangeBasedForLoopColon : true
+SpaceInEmptyParentheses : false
+SpacesBeforeTrailingComments : 2
+SpacesInAngles : true
+SpacesInCStyleCastParentheses : true
+SpacesInParentheses : true
+SpacesInSquareBrackets : true
+AlwaysBreakTemplateDeclarations : Yes
+TabWidth : 4
+UseTab : ForIndentation
+BinPackArguments : false
+AlwaysBreakBeforeMultilineStrings : false
+BreakBeforeBinaryOperators : None
+BreakInheritanceList : BeforeComma
+AllowShortEnumsOnASingleLine : false
+BinPackParameters : false
+SortIncludes: Never

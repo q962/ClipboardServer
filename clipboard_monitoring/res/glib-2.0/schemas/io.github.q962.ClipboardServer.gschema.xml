@@ -1,0 +1,29 @@
+<schemalist>
+  <schema id="io.github.q962.ClipboardServer" path="/io/github/q962/ClipboardServer/">
+    <key name="ditto-db-path" type="s">
+      <default>""</default>
+      <summary>ditto db path</summary>
+    </key>
+    <key name="port" type="u">
+      <default>0</default>
+    </key>
+    <key name="network-interface" type="s">
+      <default>""</default>
+      <summary>network interface</summary>
+    </key>
+    <key name="alias" type="s">
+      <default>""</default>
+      <summary>alias</summary>
+    </key>
+    <key name="selected-index" type="u">
+      <default>0</default>
+    </key>
+    <key name="first-run" type="b">
+      <default>true</default>
+    </key>
+    <key name="clipdata-max-count" type="u">
+      <default>0</default>
+      <summary>The maximum number of clipboard data that can be recorded. 0 means no limit.</summary>
+    </key>
+  </schema>
+</schemalist>

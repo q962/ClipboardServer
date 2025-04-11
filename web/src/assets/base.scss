@@ -1,0 +1,98 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-light: #ffffff;
+  --vt-c-light-soft: #f8f8f8;
+  --vt-c-light-mute: #f2f2f2;
+  --vt-c-light-mute-1: #e9e9e9;
+
+  --vt-c-dark: #181818;
+  --vt-c-dark-soft: #222222;
+  --vt-c-dark-mute: #282828;
+  --vt-c-dark-mute-1: #313131;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-dark);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-light);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+@each $theme in //
+"dark",
+"light"
+
+  {
+  @media (prefers-color-scheme: #{$theme}) {
+    :root {
+      --color-background: var(--vt-c-#{$theme});
+      --color-background-soft: var(--vt-c-#{$theme}-soft);
+      --color-background-mute: var(--vt-c-#{$theme}-mute);
+      --color-background-mute-1: var(--vt-c-#{$theme}-mute-1);
+      --color-border: var(--vt-c-divider-#{$theme}-2);
+      --color-border-hover: var(--vt-c-divider-#{$theme}-1);
+      --color-heading: var(--vt-c-text-#{$theme}-1);
+      --color-text: var(--vt-c-text-#{$theme}-1);
+    }
+  }
+}
+
+:root {
+  --section-gap: 160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin unselectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.unselectable {
+  @include unselectable
+}

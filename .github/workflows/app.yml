@@ -1,0 +1,124 @@
+name: App
+
+on: push
+
+jobs:
+  windows-and-android:
+    runs-on: windows-latest
+    environment: production
+    defaults:
+      run:
+        shell: msys2 {0}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "latest"
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: mingw64
+          update: true
+          install: >-
+            mingw-w64-x86_64-7zip
+            mingw-w64-x86_64-gcc
+            mingw-w64-x86_64-pkg-config
+            mingw-w64-x86_64-MinHook
+            mingw-w64-x86_64-xmake
+            mingw-w64-x86_64-lua-luarocks
+            mingw-w64-x86_64-gtk4
+            mingw-w64-x86_64-libadwaita
+            mingw-w64-x86_64-sqlite3
+            mingw-w64-x86_64-imagemagick
+            mingw-w64-x86_64-luajit
+            git
+          path-type: inherit
+
+      - run: luarocks install penlight
+
+      - run: xmake g --network=private && xmake -vD && xmake install -o build/OUT
+
+      - run: mkdir artifacts
+
+      - name: build Android
+        run: >
+          npm run build-app && npx cap sync || exit 1
+
+          export JAVA_HOME=$JAVA_HOME_21_X64
+
+          echo "$KEYSTORE_BASE64" | base64 --decode > android/app.keystore
+
+          npx cap build android
+          --keystorepath app.keystore
+          --keystorepass $KEYSTORE_PASSWORD
+          --keystorealias $KEY_ALIAS
+          --keystorealiaspass $ALIAS_PASSWORD
+          || exit 1
+
+          cp android/app/build/outputs/apk/release/app-release-signed.apk ../artifacts/io.github.q962.ClipboardClient.apk
+        working-directory: web
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          ALIAS_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+
+      - run: 7z a artifacts/windows.7z ./build/OUT/.
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: artifacts/windows.7z
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android
+          path: artifacts/io.github.q962.ClipboardClient.apk
+
+  Flatpak:
+    name: Flatpak
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-47
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          submodules: recursive
+      # fix container
+      - run: git config --global --add safe.directory $GITHUB_WORKSPACE
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "latest"
+
+      - run: mkdir -p build/bin
+      - run: cd web && npm install && npm run build
+      - run: git ls-files --recurse-submodules . | tar caf scripts/archive.tar -T-
+
+      - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          manifest-path: scripts/flatpak.yml
+          cache-key: flatpak-builder-${{ github.sha }}
+          bundle: io.github.q962.ClipboardServer.flatpak
+
+  Upload:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    needs:
+      - windows-and-android
+      - Flatpak
+    if: ${{ github.ref_type == 'tag' }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/*

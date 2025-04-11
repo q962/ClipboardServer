@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.q962.ClipboardServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.q962.ClipboardServer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-12 22:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: clipdata_manager.c:203
+msgid "Row Limit:"
+msgstr ""
+
+#: ditto.c:267
+msgid "Open"
+msgstr ""
+
+#: ditto.c:271
+msgid "Select the right Ditto.ditto_db path to enable it."
+msgstr ""
+
+#: main.c:252
+msgid "IP not selected"
+msgstr ""
+
+#: main.c:262
+msgid "Only characters allowed in aliases: 0-9a-Z_-"
+msgstr ""
+
+#: main.c:430 tray.c:87
+msgid "Clipboard Server Manager"
+msgstr ""
+
+#: main.c:441
+msgid "Bind IP Address"
+msgstr ""
+
+#: main.c:486
+msgid "Alias (optional) - used when publishing mDNS service"
+msgstr ""
+
+#: main.c:487
+msgid "Alias"
+msgstr ""
+
+#: main.c:498
+msgid "Random port assignment when set to 0"
+msgstr ""
+
+#: main.c:499
+msgid "Port"
+msgstr ""
+
+#: main.c:541
+msgid "Data Source"
+msgstr ""
+
+#: main.c:546
+msgid "Self-managed"
+msgstr ""
+
+#: main.c:791
+#, c-format
+msgid "Web Service: http://%s:%s/web"
+msgstr ""
+
+#: main.c:827
+#, c-format
+msgid "Error: %s:%s"
+msgstr ""
+
+#: tray.c:125
+msgid "Quit"
+msgstr ""

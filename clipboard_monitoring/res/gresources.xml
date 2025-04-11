@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/q962/ClipboardServer">
+    <file alias="icons/app.ico">io.github.q962.ClipboardServer/icons/app.ico</file>
+    <file>styles/main.css</file>
+    <file>styles/override_default.css</file>
+  </gresource>
+</gresources>
