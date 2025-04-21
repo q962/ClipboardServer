@@ -64,12 +64,13 @@ do
 
         -- download dnssd
         if not os.isfile("dnssd" .. exe_suffix) then
-            local version = "v1.2.15"
+            local version = "v1.2.14"
             if is_host("windows") then
-                http.download("https://github.com/q962/dnssd/releases/download/" .. version .. "/dnssd-Windows.exe",
-                    "dnssd.exe")
+                http.download(format("https://github.com/q962/dnssd/releases/download/%s/dnssd-Windows-x86_64.exe",
+                    version), "dnssd.exe")
             elseif is_host("linux") then
-                http.download("https://github.com/q962/dnssd/releases/download/" .. version .. "/dnssd-Linux", "dnssd")
+                http.download(format("https://github.com/q962/dnssd/releases/download/%s/dnssd-Linux-%s", version,
+                    config.get("arch")), "dnssd")
                 os.run("chmod u+x dnssd")
             end
         end
