@@ -14,21 +14,22 @@
 	<developer id="io.github.q962">
 		<name>q962</name>
 	</developer>
-	<url type="homepage">https://github.com/q962/clipboared-server</url>
-	<url type="bugtracker">https://github.com/q962/clipboared-server/issues</url>
+	<url type="homepage">https://github.com/q962/ClipboardServer</url>
+	<url type="bugtracker">https://github.com/q962/ClipboardServer/issues</url>
 	<launchable type="desktop-id">io.github.q962.ClipboardServer.desktop</launchable>
 	<screenshots>
 		<screenshot type="default">
-			<image>https://github.com/q962/clipboared-server/raw/refs/tags/v1.0/data/screenshots/main.png</image>
+			<image>https://github.com/q962/ClipboardServer/raw/refs/tags/v1.0/data/screenshots/main.png</image>
 		</screenshot>
 		<screenshot>
-			<image>https://github.com/q962/clipboared-server/raw/refs/tags/v1.0/data/screenshots/app.png</image>
+			<image>https://github.com/q962/ClipboardServer/raw/refs/tags/v1.0/data/screenshots/app.png</image>
 		</screenshot>
 		<screenshot>
-			<image>https://github.com/q962/clipboared-server/raw/refs/tags/v1.0/data/screenshots/app_push.png</image>
+			<image>https://github.com/q962/ClipboardServer/raw/refs/tags/v1.0/data/screenshots/app_push.png</image>
 		</screenshot>
 	</screenshots>
 	<releases>
 		<release version="1.0" date="2025-04-17" />
 	</releases>
+	<content_rating type="oars-1.1" />
 </component>
