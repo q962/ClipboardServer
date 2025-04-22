@@ -10,7 +10,7 @@ int main( int argc, char** args )
 	si.dwFlags     = STARTF_USESHOWWINDOW;
 	si.wShowWindow = SW_HIDE;
 
-	wchar_t commandLine[] = L"bin/ClipboaredServer";
+	wchar_t commandLine[] = L"bin/ClipboardServer";
 	if ( !CreateProcess( NULL,              //
 	                     commandLine,       //
 	                     NULL,              //

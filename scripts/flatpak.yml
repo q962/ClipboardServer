@@ -3,7 +3,7 @@ runtime: org.gnome.Platform
 runtime-version: "47"
 branch: stable
 sdk: org.gnome.Sdk
-command: ClipboaredServer
+command: ClipboardServer
 
 finish-args:
   - --socket=x11

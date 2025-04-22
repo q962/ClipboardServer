@@ -3,8 +3,8 @@ Name=ClipboardServer
 Name[zh_CN]=剪切板服务
 Comment=Stores clipboard data. Data can be obtained through http requests
 Comment[zh_CN]=存储剪切板数据。可通过 http 请求获取数据
-Exec=ClipboaredServer
-TryExec=ClipboaredServer
+Exec=ClipboardServer
+TryExec=ClipboardServer
 Icon=io.github.q962.ClipboardServer
 Terminal=false
 Type=Application
@@ -17,4 +17,4 @@ Keywords[zh_CN]=clipboard;剪切板
 [Desktop Action Quit]
 Name=Quit
 Name[zh_CN]=退出
-Exec=ClipboaredServer --quit
+Exec=ClipboardServer --quit

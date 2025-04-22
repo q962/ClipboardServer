@@ -31,7 +31,7 @@ do
         prefixdir = "bin"
     })
 
-    add_installfiles("build/bin/ClipboaredServer*", {
+    add_installfiles("build/bin/ClipboardServer*", {
         prefixdir = "bin"
     })
 
@@ -162,7 +162,7 @@ do
 
         os.cp(target:dep("gtkclip"):targetfile(), lua_libs_path);
 
-        os.execv(other_bin_path .. luvi_exe, {lua_root_path, "-o", other_bin_path .. "ClipboaredServer" .. exe_suffix})
+        os.execv(other_bin_path .. luvi_exe, {lua_root_path, "-o", other_bin_path .. "ClipboardServer" .. exe_suffix})
 
         local cmd_suffix = is_host('windows') and ".cmd" or "";
         local npm_exec = "npm" .. cmd_suffix
