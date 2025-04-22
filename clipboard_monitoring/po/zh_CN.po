@@ -39,7 +39,6 @@ msgid "Only characters allowed in aliases: 0-9a-Z_-"
 msgstr "仅允许字符：0-9a-Z_-"
 
 #: main.c:430 tray.c:87
-#, fuzzy
 msgid "Clipboard Server Manager"
 msgstr "剪切板服务管理"
 
