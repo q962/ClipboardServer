@@ -47,8 +47,7 @@ modules:
         url: https://github.com/xmake-io/xmake.git
         tag: v2.9.8
     cleanup:
-      - /bin
-      - /share
+      - '*'
 
   - name: luajit
     buildsystem: simple
@@ -60,9 +59,8 @@ modules:
         url: https://github.com/LuaJIT/LuaJIT.git
         tag: v2.1
     cleanup:
-      - /bin
-      - /lib
-      - /share
+      - '*'
+
 
   - name: luarocks
     sources:
@@ -79,14 +77,10 @@ modules:
       - luarocks config connection_timeout 50000
       - luarocks install penlight
     cleanup:
-      - /bin
-      - /etc
-      - /share
+      - '*'
 
   - name: ClipboardServer
     buildsystem: simple
-    build-options:
-      no-debuginfo: true
     build-commands:
       - |
         export XMAKE_GLOBALDIR=/run/temp/xmake
@@ -94,6 +88,18 @@ modules:
         xmake g --network=private
         xmake
         xmake install -o /app
+
+        echo "package.cpath = package.cpath .. ';' .. '/app/lib/?.so'" > build/bin/lua_root/local-env.lua
+        cp -r build/bin/lua_root /app/scripts
+
+        mv /app/bin/{ClipboardServer,ClipboardServer.elf}
+
+        cat << EOF > /app/bin/ClipboardServer
+        #!/usr/bin/bash
+        exec ClipboardServer.elf /app/scripts -- "\$@"
+        EOF
+
+        chmod +x /app/bin/ClipboardServer
     sources:
       - type: archive
         path: archive.tar
